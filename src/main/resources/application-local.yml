@@ -1,0 +1,18 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: @project.artifactId@
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://10.8.18.175:30336/upload?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 2
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
